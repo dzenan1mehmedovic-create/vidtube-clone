@@ -1,0 +1,28 @@
+.shorts {
+  margin-bottom: 30px;
+}
+
+.shorts h3 {
+  margin-bottom: 10px;
+}
+
+.shorts-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.short-card {
+  min-width: 180px;
+}
+
+.short-card iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.short-card p {
+  font-size: 14px;
+  margin-top: 5px;
+}
