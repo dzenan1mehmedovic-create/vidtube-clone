@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = ({ setSidebar }) => {
@@ -8,7 +9,10 @@ const Navbar = ({ setSidebar }) => {
         <span className="menu-icon" onClick={() => setSidebar((prev) => !prev)}>
           ☰
         </span>
-        <h1 className="logo">VidTube</h1>
+
+        <Link to="/" className="logo-link">
+          <h1 className="logo">VidTube</h1>
+        </Link>
       </div>
 
       <div className="nav-middle">
