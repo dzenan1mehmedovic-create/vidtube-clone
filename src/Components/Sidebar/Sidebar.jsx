@@ -1,5 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+const location = useLocation();
+
+
 
 const Sidebar = ({ sidebar, category, setCategory }) => {
   return (
@@ -10,8 +15,16 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
           onClick={() => setCategory(0)}
         >
           <span>🏠</span>
-          <p>Home</p>
+          <p>Home</p>  
         </div>
+        <Link
+          to="/shorts"
+          className={`side-link ${location.pathname === "/shorts" ? "active" : ""}`}
+        >
+          <span>🎬</span> 
+          <p>Shorts</p>
+        </Link>
+
 
         <div
           className={`side-link ${category === 20 ? "active" : ""}`}

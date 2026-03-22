@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Home from "./Pages/Home/Home";
 import Video from "./Pages/Video/Video";
+import ShortsPage from "./Pages/Shorts/ShortsPage";
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
@@ -38,7 +39,9 @@ const App = () => {
         />
 
         <Route path="/video/:categoryId/:videoId" element={<Video />} />
+        <Route path="/shorts" element={<ShortsPage />} />
       </Routes>
+      
     </div>
   );
 };

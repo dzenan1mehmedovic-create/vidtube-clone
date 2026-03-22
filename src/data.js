@@ -341,3 +341,41 @@ export const videoData = [
     profile: "https://i.pravatar.cc/60?img=49",
   },
 ];
+export const shortsData = [
+  {
+    id: "dQw4w9WgXcQ",
+    title: "Classic viral short",
+    channel: "Retro Hits",
+    views: "12M Views",
+  },
+  {
+    id: "QH2-TGUlwu4",
+    title: "Funny meme short",
+    channel: "Internet Fun",
+    views: "8.5M Views",
+  },
+  {
+    id: "9bZkp7q19f0",
+    title: "Popular music short",
+    channel: "officialpsy",
+    views: "22M Views",
+  },
+  {
+    id: "L_jWHffIx5E",
+    title: "Entertainment short clip",
+    channel: "Viral Mix",
+    views: "4.2M Views",
+  },
+  {
+    id: "e-ORhEE9VVg",
+    title: "Trending short moment",
+    channel: "Stream Picks",
+    views: "3.1M Views",
+  },
+  {
+    id: "Zi_XLOBDo_Y",
+    title: "Music throwback short",
+    channel: "World Update",
+    views: "6.7M Views",
+  },
+];

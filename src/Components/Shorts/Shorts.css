@@ -26,3 +26,15 @@
   font-size: 14px;
   margin-top: 5px;
 }
+.shorts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.see-all-shorts {
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+}
