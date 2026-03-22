@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { videoData } from "../../data";
 import "./Feed.css";
 
-const Feed = ({ category, searchQuery }) => {
+const Feed = ({ category, searchQuery = "" }) => {
   const filteredByCategory =
     category === 0
       ? videoData
@@ -25,7 +25,7 @@ const Feed = ({ category, searchQuery }) => {
           <Link
             to={`/video/${video.category}/${video.id}`}
             className="card"
-            key={video.id}
+            key={`${video.category}-${video.id}-${video.title}`}
           >
             <img src={video.image} alt={video.title} />
             <h2>{video.title}</h2>

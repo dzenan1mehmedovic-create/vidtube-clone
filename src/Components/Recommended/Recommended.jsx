@@ -4,17 +4,27 @@ import { videoData } from "../../data";
 import "./Recommended.css";
 
 const Recommended = () => {
-  const { videoId } = useParams();
+  const { videoId, categoryId } = useParams();
 
-  const filteredRecommended = videoData.filter((video) => video.id !== videoId);
+  const sameCategoryVideos = videoData.filter(
+    (video) =>
+      video.id !== videoId && String(video.category) === String(categoryId)
+  );
+
+  const fallbackVideos = videoData.filter((video) => video.id !== videoId);
+
+  const videosToShow =
+    sameCategoryVideos.length > 0
+      ? sameCategoryVideos.slice(0, 8)
+      : fallbackVideos.slice(0, 8);
 
   return (
     <div className="recommended">
-      {filteredRecommended.map((video) => (
+      {videosToShow.map((video) => (
         <Link
           to={`/video/${video.category}/${video.id}`}
           className="side-video-list"
-          key={video.id}
+          key={`${video.category}-${video.id}-${video.title}`}
         >
           <img src={video.image} alt={video.title} />
 
