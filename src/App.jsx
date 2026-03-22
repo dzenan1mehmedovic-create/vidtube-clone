@@ -1,14 +1,31 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Home from "./Pages/Home/Home";
+import Video from "./Pages/Video/Video";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Sidebar />
-      <Home />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Sidebar />
+              <Home />
+            </>
+          }
+        />
+
+        <Route
+          path="/video/:categoryId/:videoId"
+          element={<Video />}
+        />
+      </Routes>
     </div>
   );
 };
