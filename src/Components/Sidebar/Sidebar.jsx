@@ -5,18 +5,63 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="shortcut-links">
-        <p>Home</p>
-        <p>Gaming</p>
-        <p>Music</p>
-        <p>Sports</p>
+        <div className="side-link active">
+          <p>Home</p>
+        </div>
+
+        <div className="side-link">
+          <p>Gaming</p>
+        </div>
+
+        <div className="side-link">
+          <p>Music</p>
+        </div>
+
+        <div className="side-link">
+          <p>Sports</p>
+        </div>
+
+        <div className="side-link">
+          <p>Technology</p>
+        </div>
+
+        <div className="side-link">
+          <p>Automobiles</p>
+        </div>
+
+        <div className="side-link">
+          <p>Blogs</p>
+        </div>
+
+        <div className="side-link">
+          <p>News</p>
+        </div>
+
+        <hr />
       </div>
 
-      <hr />
-
       <div className="subscribed-list">
-        <p>PewDiePie</p>
-        <p>MrBeast</p>
-        <p>Justin Bieber</p>
+        <h3>Subscribed</h3>
+
+        <div className="side-link">
+          <p>PewDiePie</p>
+        </div>
+
+        <div className="side-link">
+          <p>MrBeast</p>
+        </div>
+
+        <div className="side-link">
+          <p>Justin Bieber</p>
+        </div>
+
+        <div className="side-link">
+          <p>5-Minute Crafts</p>
+        </div>
+
+        <div className="side-link">
+          <p>Nas Daily</p>
+        </div>
       </div>
     </div>
   );
