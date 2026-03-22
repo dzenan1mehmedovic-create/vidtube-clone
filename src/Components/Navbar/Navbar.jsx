@@ -5,15 +5,21 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <p className="logo">VidTube</p>
+        <span className="menu-icon">☰</span>
+        <h1 className="logo">VidTube</h1>
       </div>
 
       <div className="nav-middle">
-        <input type="text" placeholder="Search" />
+        <div className="search-box">
+          <input type="text" placeholder="Search" />
+          <span className="search-icon">⌕</span>
+        </div>
       </div>
 
       <div className="nav-right">
-        <p>User</p>
+        <span>⨁</span>
+        <span>🔔</span>
+        <div className="user-icon">U</div>
       </div>
     </nav>
   );
