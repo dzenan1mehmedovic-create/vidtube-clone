@@ -8,10 +8,11 @@ import Video from "./Pages/Video/Video";
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
   const [category, setCategory] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div>
-      <Navbar setSidebar={setSidebar} />
+      <Navbar setSidebar={setSidebar} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <Routes>
         <Route
@@ -23,7 +24,11 @@ const App = () => {
                 category={category}
                 setCategory={setCategory}
               />
-              <Home sidebar={sidebar} category={category} />
+              <Home
+                sidebar={sidebar}
+                category={category}
+                searchQuery={searchQuery}
+              />
             </>
           }
         />

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ setSidebar }) => {
+const Navbar = ({ setSidebar, searchQuery, setSearchQuery }) => {
   return (
     <nav className="navbar">
       <div className="nav-left">
@@ -17,7 +17,12 @@ const Navbar = ({ setSidebar }) => {
 
       <div className="nav-middle">
         <div className="search-box">
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
           <span className="search-icon">⌕</span>
         </div>
       </div>
