@@ -5,18 +5,32 @@
   position: fixed;
   top: 62px;
   left: 0;
-  padding-left: 2%;
+  padding-left: 1.5%;
   padding-top: 20px;
   transition: 0.3s;
+  overflow-y: auto;
 }
 
 .shortcut-links .side-link,
 .subscribed-list .side-link {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 18px;
   width: fit-content;
   cursor: pointer;
+}
+
+.side-link span {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+}
+
+.side-link img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
 }
 
 .side-link p {
@@ -39,7 +53,8 @@
   font-weight: 600;
 }
 
-.side-link.active p {
+.side-link.active p,
+.side-link.active span {
   color: red;
   font-weight: 600;
 }
@@ -59,6 +74,11 @@
 .small-sidebar hr {
   width: 50%;
   margin-bottom: 25px;
+}
+
+.small-sidebar .side-link img {
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 900px) {

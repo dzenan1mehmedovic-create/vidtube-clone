@@ -12,7 +12,11 @@ const App = () => {
 
   return (
     <div>
-      <Navbar setSidebar={setSidebar} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Navbar
+        setSidebar={setSidebar}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
 
       <Routes>
         <Route
