@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   return (
     <div>
-      <h1>VidTube Clone</h1>
+      <Navbar />
     </div>
   );
 };
