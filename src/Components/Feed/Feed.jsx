@@ -5,64 +5,76 @@ import "./Feed.css";
 const Feed = ({ category }) => {
   const videos = [
     {
-      id: 1,
-      category: 20,
-      image:
-        "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1200&auto=format&fit=crop",
-      title: "Best YouTube Channel To Learn Web Development",
-      channel: "GreatStack",
-      views: "199K Views",
-      time: "2 days ago",
-    },
-    {
-      id: 2,
+      id: "ysz5S6PUM-U",
       category: 10,
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-      title: "Top 10 React Project Ideas For Beginners",
-      channel: "Code Master",
-      views: "85K Views",
-      time: "5 days ago",
+      image: "https://img.youtube.com/vi/ysz5S6PUM-U/hqdefault.jpg",
+      title: "Learn React in 12 Minutes",
+      channel: "Jake Wright",
+      views: "1.2M Views",
+      time: "2 years ago",
     },
     {
-      id: 3,
-      category: 17,
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-      title: "How To Build A Full Website Using React JS",
-      channel: "Dev Studio",
-      views: "312K Views",
-      time: "1 week ago",
-    },
-    {
-      id: 4,
+      id: "w7ejDZ8SWv8",
       category: 28,
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-      title: "JavaScript Crash Course 2026",
-      channel: "Tech World",
-      views: "540K Views",
-      time: "3 weeks ago",
+      image: "https://img.youtube.com/vi/w7ejDZ8SWv8/hqdefault.jpg",
+      title: "React JS Full Course for Beginners",
+      channel: "Programming with Mosh",
+      views: "5.4M Views",
+      time: "3 years ago",
     },
     {
-      id: 5,
+      id: "SqcY0GlETPk",
+      category: 17,
+      image: "https://img.youtube.com/vi/SqcY0GlETPk/hqdefault.jpg",
+      title: "Learn JavaScript in 1 Hour",
+      channel: "Programming with Mosh",
+      views: "9.1M Views",
+      time: "2 years ago",
+    },
+    {
+      id: "PkZNo7MFNFg",
+      category: 20,
+      image: "https://img.youtube.com/vi/PkZNo7MFNFg/hqdefault.jpg",
+      title: "JavaScript Tutorial for Beginners",
+      channel: "freeCodeCamp.org",
+      views: "23M Views",
+      time: "5 years ago",
+    },
+    {
+      id: "rfscVS0vtbw",
+      category: 28,
+      image: "https://img.youtube.com/vi/rfscVS0vtbw/hqdefault.jpg",
+      title: "Python Full Course for Beginners",
+      channel: "freeCodeCamp.org",
+      views: "61M Views",
+      time: "4 years ago",
+    },
+    {
+      id: "kUMe1FH4CHE",
       category: 2,
-      image:
-        "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop",
-      title: "Best Cars Coming This Year",
-      channel: "Auto Zone",
-      views: "110K Views",
-      time: "6 days ago",
+      image: "https://img.youtube.com/vi/kUMe1FH4CHE/hqdefault.jpg",
+      title: "Learn HTML in 12 Minutes",
+      channel: "Jake Wright",
+      views: "2.8M Views",
+      time: "6 years ago",
     },
     {
-      id: 6,
+      id: "OXGznpKZ_sA",
       category: 25,
-      image:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop",
-      title: "Latest World News Update Today",
-      channel: "News Daily",
-      views: "450K Views",
-      time: "1 day ago",
+      image: "https://img.youtube.com/vi/OXGznpKZ_sA/hqdefault.jpg",
+      title: "CSS Tutorial for Beginners",
+      channel: "Programming with Mosh",
+      views: "4.7M Views",
+      time: "4 years ago",
+    },
+    {
+      id: "mU6anWqZJcc",
+      category: 22,
+      image: "https://img.youtube.com/vi/mU6anWqZJcc/hqdefault.jpg",
+      title: "Build and Deploy 3 Modern React Apps",
+      channel: "JavaScript Mastery",
+      views: "1.1M Views",
+      time: "1 year ago",
     },
   ];
 
@@ -77,7 +89,7 @@ const Feed = ({ category }) => {
           className="card"
           key={video.id}
         >
-          <img src={video.image} alt="" />
+          <img src={video.image} alt={video.title} />
           <h2>{video.title}</h2>
           <h3>{video.channel}</h3>
           <p>

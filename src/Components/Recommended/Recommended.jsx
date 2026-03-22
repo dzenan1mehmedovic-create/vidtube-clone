@@ -5,52 +5,46 @@ import "./Recommended.css";
 const Recommended = () => {
   const recommendedVideos = [
     {
-      id: 11,
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-      title: "Best channel to learn coding that helps you grow fast",
-      channel: "GreatStack",
-      views: "199K Views",
+      id: "ysz5S6PUM-U",
+      image: "https://img.youtube.com/vi/ysz5S6PUM-U/hqdefault.jpg",
+      title: "Learn React in 12 Minutes",
+      channel: "Jake Wright",
+      views: "1.2M Views",
     },
     {
-      id: 12,
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-      title: "React full course for complete beginners",
-      channel: "Code Studio",
-      views: "88K Views",
+      id: "w7ejDZ8SWv8",
+      image: "https://img.youtube.com/vi/w7ejDZ8SWv8/hqdefault.jpg",
+      title: "React JS Full Course for Beginners",
+      channel: "Programming with Mosh",
+      views: "5.4M Views",
     },
     {
-      id: 13,
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-      title: "JavaScript roadmap and what to learn first",
-      channel: "Dev World",
-      views: "54K Views",
+      id: "SqcY0GlETPk",
+      image: "https://img.youtube.com/vi/SqcY0GlETPk/hqdefault.jpg",
+      title: "Learn JavaScript in 1 Hour",
+      channel: "Programming with Mosh",
+      views: "9.1M Views",
     },
     {
-      id: 14,
-      image:
-        "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1200&auto=format&fit=crop",
-      title: "Build projects that make your portfolio stronger",
-      channel: "Frontend Lab",
-      views: "320K Views",
+      id: "PkZNo7MFNFg",
+      image: "https://img.youtube.com/vi/PkZNo7MFNFg/hqdefault.jpg",
+      title: "JavaScript Tutorial for Beginners",
+      channel: "freeCodeCamp.org",
+      views: "23M Views",
     },
     {
-      id: 15,
-      image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1200&auto=format&fit=crop",
-      title: "Learn frontend development with real-world examples",
-      channel: "Tech Learn",
-      views: "121K Views",
+      id: "rfscVS0vtbw",
+      image: "https://img.youtube.com/vi/rfscVS0vtbw/hqdefault.jpg",
+      title: "Python Full Course for Beginners",
+      channel: "freeCodeCamp.org",
+      views: "61M Views",
     },
     {
-      id: 16,
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
-      title: "How to become better at React by building projects",
-      channel: "React Master",
-      views: "267K Views",
+      id: "OXGznpKZ_sA",
+      image: "https://img.youtube.com/vi/OXGznpKZ_sA/hqdefault.jpg",
+      title: "CSS Tutorial for Beginners",
+      channel: "Programming with Mosh",
+      views: "4.7M Views",
     },
   ];
 
@@ -58,7 +52,7 @@ const Recommended = () => {
     <div className="recommended">
       {recommendedVideos.map((video) => (
         <Link to={`/video/20/${video.id}`} className="side-video-list" key={video.id}>
-          <img src={video.image} alt="" />
+          <img src={video.image} alt={video.title} />
 
           <div className="vid-info">
             <h4>{video.title}</h4>

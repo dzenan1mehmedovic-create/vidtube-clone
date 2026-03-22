@@ -8,9 +8,10 @@ const PlayVideo = () => {
   return (
     <div className="play-video">
       <iframe
-        src={`https://www.youtube.com/embed/dQw4w9WgXcQ`}
+        src={`https://www.youtube.com/embed/${videoId}`}
         title="video player"
         frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
 
@@ -30,10 +31,7 @@ const PlayVideo = () => {
       <hr />
 
       <div className="publisher">
-        <img
-          src="https://i.pravatar.cc/60?img=12"
-          alt=""
-        />
+        <img src="https://i.pravatar.cc/60?img=12" alt="publisher" />
 
         <div>
           <p>GreatStack</p>
@@ -44,12 +42,10 @@ const PlayVideo = () => {
       </div>
 
       <div className="vid-description">
+        <p>Channel that makes learning web development easy for everyone.</p>
         <p>
-          Channel that makes learning web development easy for everyone.
-        </p>
-        <p>
-          Learn React, JavaScript, CSS, responsive design and complete
-          projects step by step.
+          Learn React, JavaScript, CSS, responsive design and complete projects
+          step by step.
         </p>
         <hr />
         <h4>130 Comments</h4>
