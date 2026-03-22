@@ -7,6 +7,7 @@ import Video from "./Pages/Video/Video";
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
+  const [category, setCategory] = useState(0);
 
   return (
     <div>
@@ -17,16 +18,17 @@ const App = () => {
           path="/"
           element={
             <>
-              <Sidebar sidebar={sidebar} />
-              <Home sidebar={sidebar} />
+              <Sidebar
+                sidebar={sidebar}
+                category={category}
+                setCategory={setCategory}
+              />
+              <Home sidebar={sidebar} category={category} />
             </>
           }
         />
 
-        <Route
-          path="/video/:categoryId/:videoId"
-          element={<Video />}
-        />
+        <Route path="/video/:categoryId/:videoId" element={<Video />} />
       </Routes>
     </div>
   );
