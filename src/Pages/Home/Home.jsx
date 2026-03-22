@@ -2,9 +2,9 @@ import React from "react";
 import "./Home.css";
 import Feed from "../../Components/Feed/Feed";
 
-const Home = () => {
+const Home = ({ sidebar }) => {
   return (
-    <div className="container">
+    <div className={`container ${sidebar ? "" : "large-container"}`}>
       <Feed />
     </div>
   );

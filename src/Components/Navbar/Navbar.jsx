@@ -1,11 +1,13 @@
 import React from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ setSidebar }) => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <span className="menu-icon">☰</span>
+        <span className="menu-icon" onClick={() => setSidebar((prev) => !prev)}>
+          ☰
+        </span>
         <h1 className="logo">VidTube</h1>
       </div>
 

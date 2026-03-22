@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
@@ -6,17 +6,19 @@ import Home from "./Pages/Home/Home";
 import Video from "./Pages/Video/Video";
 
 const App = () => {
+  const [sidebar, setSidebar] = useState(true);
+
   return (
     <div>
-      <Navbar />
+      <Navbar setSidebar={setSidebar} />
 
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Sidebar />
-              <Home />
+              <Sidebar sidebar={sidebar} />
+              <Home sidebar={sidebar} />
             </>
           }
         />
