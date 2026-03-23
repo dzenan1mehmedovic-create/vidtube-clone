@@ -3,18 +3,34 @@ import { Link } from "react-router-dom";
 import { videoData } from "../../data";
 import "./Feed.css";
 
+const categoryNames = {
+  0: "General",
+  2: "Automobiles",
+  10: "Music",
+  17: "Sports",
+  20: "Gaming",
+  22: "Blogs",
+  24: "Entertainment",
+  25: "News",
+  28: "Technology",
+};
+
 const Feed = ({ category, searchQuery = "" }) => {
   const filteredByCategory =
     category === 0
       ? videoData
       : videoData.filter((video) => video.category === category);
 
+  const query = searchQuery.trim().toLowerCase();
+
   const filteredVideos = filteredByCategory.filter((video) => {
-    const query = searchQuery.toLowerCase();
+    const categoryName = categoryNames[video.category]?.toLowerCase() || "";
 
     return (
       video.title.toLowerCase().includes(query) ||
-      video.channel.toLowerCase().includes(query)
+      video.channel.toLowerCase().includes(query) ||
+      video.description.toLowerCase().includes(query) ||
+      categoryName.includes(query)
     );
   });
 
