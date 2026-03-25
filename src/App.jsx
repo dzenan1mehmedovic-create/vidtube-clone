@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import Video from "./Pages/Video/Video";
 import ShortsPage from "./Pages/Shorts/ShortsPage";
 import SearchResults from "./Pages/SearchResults/SearchResults";
+import ProfilePage from "./Pages/Profile/ProfilePage";
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
@@ -48,11 +49,15 @@ const App = () => {
                 category={category}
                 setCategory={setCategory}
               />
-              <SearchResults sidebar={sidebar} setSearchQuery={setSearchQuery} />
+              <SearchResults
+                sidebar={sidebar}
+                setSearchQuery={setSearchQuery}
+              />
             </>
           }
         />
 
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/video/:categoryId/:videoId" element={<Video />} />
         <Route path="/shorts" element={<ShortsPage />} />
       </Routes>

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import profileImg from "../../assets/profile.jpg";
 
 const Navbar = ({ setSidebar, searchQuery, setSearchQuery }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   const handleSearch = () => {
     const trimmedQuery = searchQuery.trim();
@@ -27,6 +29,16 @@ const Navbar = ({ setSidebar, searchQuery, setSearchQuery }) => {
     if (location.pathname === "/search") {
       setSearchQuery("");
     }
+    setShowProfileMenu(false);
+  };
+
+  const handleProfileClick = () => {
+    setShowProfileMenu((prev) => !prev);
+  };
+
+  const goToProfile = () => {
+    setShowProfileMenu(false);
+    navigate("/profile");
   };
 
   return (
@@ -59,7 +71,31 @@ const Navbar = ({ setSidebar, searchQuery, setSearchQuery }) => {
       <div className="nav-right">
         <span>⨁</span>
         <span>🔔</span>
-        <div className="user-icon">U</div>
+
+        <div className="profile-wrapper">
+          <img
+            src={profileImg}
+            alt="profile"
+            className="user-icon"
+            onClick={handleProfileClick}
+          />
+
+          {showProfileMenu && (
+            <div className="profile-menu">
+              <div className="profile-menu-header">
+                <img src={profileImg} alt="profile" className="profile-menu-avatar" />
+                <div>
+                  <h4>Dzenan</h4>
+                  <p>@dzenan</p>
+                </div>
+              </div>
+
+              <button className="profile-menu-item" onClick={goToProfile}>
+                Profile
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
