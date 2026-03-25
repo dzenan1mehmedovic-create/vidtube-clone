@@ -49,7 +49,7 @@ const Navbar = ({ setSidebar, searchQuery, setSearchQuery }) => {
         </span>
 
         <Link to="/" className="logo-link" onClick={handleLogoClick}>
-          <h1 className="logo">VidTube</h1>
+          <h1 className="logo">YouTube</h1>
         </Link>
       </div>
 
